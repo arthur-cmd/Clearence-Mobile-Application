@@ -5,6 +5,7 @@ import 'package:ocms/pages/homepage.dart';
 import 'package:ocms/pages/Welcome.dart';
 import '../pages/ClearencePage.dart';
 import '../pages/StatusPage.dart';
+import '../pages/settings.dart';
 //import '../sidebar_layout/SideBarLayout.dart';
 
 enum NavigationEvents {
@@ -12,6 +13,7 @@ enum NavigationEvents {
   ClearenceClickedEvent,
   StatusClickedEvent,
   WelcomeClickedEvent,
+  SettingClickedEvent,
 }
 
 abstract class NavigationStates {}
@@ -42,6 +44,10 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
       case NavigationEvents.WelcomeClickedEvent:
         yield Welcomepage();
 
+        break;
+
+      case NavigationEvents.SettingClickedEvent:
+        yield Settingspage();
         break;
       default:
     }

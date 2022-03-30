@@ -136,14 +136,7 @@ class _SideBarState extends State<SideBar>
                               .add(NavigationEvents.HomepageClickedEvent);
                         },
                       ),
-                      MenuItem(
-                          icon: Icons.graphic_eq,
-                          title: 'Notifications',
-                          onTap: () {
-                            onIconPressed();
-                            BlocProvider.of<NavigationBloc>(context)
-                                .add(NavigationEvents.StatusClickedEvent);
-                          }),
+
                       MenuItem(
                           icon: Icons.fact_check,
                           title: 'Clearence progress',
@@ -159,23 +152,32 @@ class _SideBarState extends State<SideBar>
                         indent: 32,
                         endIndent: 32,
                       ),
+
+                      MenuItem(
+                          icon: Icons.graphic_eq,
+                          title: 'Notifications',
+                          onTap: () {
+                            onIconPressed();
+                            BlocProvider.of<NavigationBloc>(context)
+                                .add(NavigationEvents.StatusClickedEvent);
+                          }),
                       MenuItem(
                         icon: Icons.settings,
                         title: 'Settings',
                         onTap: () {
                           onIconPressed();
                           BlocProvider.of<NavigationBloc>(context)
-                              .add(NavigationEvents.HomepageClickedEvent);
+                              .add(NavigationEvents.SettingClickedEvent);
                         },
                       ),
-                      MenuItem(
-                          icon: Icons.exit_to_app,
-                          title: 'Logout',
-                          onTap: () {
-                            onIconPressed();
-                            BlocProvider.of<NavigationBloc>(context)
-                                .add(NavigationEvents.HomepageClickedEvent);
-                          }),
+                      //MenuItem(
+                      //icon: Icons.exit_to_app,
+                      //title: 'Logout',
+                      //onTap: () {
+                      //onIconPressed();
+                      //BlocProvider.of<NavigationBloc>(context)
+                      //.add(NavigationEvents.HomepageClickedEvent);
+                      //}),
                     ],
                   ),
                 ),

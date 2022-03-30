@@ -17,7 +17,7 @@ class _HomepageState extends State<Homepage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Widget BuildName() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'name'),
+      decoration: InputDecoration(labelText: '     name'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your name';
@@ -31,7 +31,7 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildReg() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Registration number'),
+      decoration: InputDecoration(labelText: '     Registration number'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your registration number';
@@ -43,9 +43,11 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
+  
+
   Widget BuildRoom() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Room'),
+      decoration: InputDecoration(labelText: '     Room'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your room number';
@@ -59,7 +61,7 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildProgramme() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Programme'),
+      decoration: InputDecoration(labelText: '    Programme'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your programme';
@@ -73,7 +75,7 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildHall() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Hall'),
+      decoration: InputDecoration(labelText: '      Hall'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your hall of residency';
@@ -87,7 +89,7 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildSponsor() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Sponsor'),
+      decoration: InputDecoration(labelText: '       Sponsor'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your sponsor name';
@@ -101,8 +103,8 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Center(
+      child: Container(
           child: Form(
         key: _formKey,
         child: Column(
