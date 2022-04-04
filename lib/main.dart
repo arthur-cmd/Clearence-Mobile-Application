@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './sidebar_layout/SideBarLayout.dart';
+import './pages/option.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ocm',
       debugShowCheckedModeBanner: false,
-      home: Loginpage(), //SideBarLayout(),
+      home: Option(), //SideBarLayout(),
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.white, primaryColor: Colors.white),
     );
@@ -178,7 +179,7 @@ class _LoginpageState extends State<Loginpage> {
                 // )
               ],
             ),
-          ),
+          )
         )
       ],
     );

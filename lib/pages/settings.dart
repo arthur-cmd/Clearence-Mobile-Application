@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 import 'package:ocms/main.dart';
+//import 'package:app_settings/app_settings.dart';
 
 class Settingspage extends StatelessWidget with NavigationStates {
   @override
   Widget build(BuildContext context) {
     return Center(
+      
         child: RaisedButton(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
       color: Colors.blue,
@@ -14,6 +16,7 @@ class Settingspage extends StatelessWidget with NavigationStates {
           context,
           MaterialPageRoute(builder: (context) => Loginpage()),
         );
+
       },
       child: Text(
         'Logout',
@@ -22,6 +25,7 @@ class Settingspage extends StatelessWidget with NavigationStates {
           letterSpacing: 1.5,
         ),
       ),
-    ));
+    )
+    );
   }
 }
