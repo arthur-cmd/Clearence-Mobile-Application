@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ocms/main.dart';
+import 'package:ocms/staff/login.dart';
 //import './sidebar_layout/SideBarLayout.dart';
 
 class Option extends StatefulWidget {
@@ -9,9 +12,20 @@ class Option extends StatefulWidget {
 }
 
 class _OptionState extends State<Option> {
-  
-
- 
+  Widget _buildLogo() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          'OCMS',
+          style: TextStyle(
+              fontSize: MediaQuery.of(context).size.height / 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.white),
+        ),
+      ],
+    );
+  }
 
   Widget _buildContainer() {
     return Row(
@@ -30,6 +44,7 @@ class _OptionState extends State<Option> {
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
                     Text(
@@ -39,26 +54,60 @@ class _OptionState extends State<Option> {
                     ),
                   ],
                 ),
-                Row(
+
+                Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   // ignore: prefer_const_literals_to_create_immutables
+
                   children: <Widget>[
-                    Text(
-                      "staff",
-                      style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height / 30),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => StaffLogin()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      color: Colors.blue,
+                      child: Text(
+                        'Staff?',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
                     ),
+
+                    //Text(
+                    //"staff",
+                    //style: TextStyle(
+                    //  fontSize: MediaQuery.of(context).size.height / 30),
+                    //),
                   ],
                 ),
-                Row(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
-                    Text(
-                      "student",
-                      style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height / 30),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Loginpage()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      color: Colors.blue,
+                      child: Text(
+                        'Student?',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
                     ),
+
+                    //Text(
+                    //"student",
+                    //style: TextStyle(
+                    //fontSize: MediaQuery.of(context).size.height / 30),
+                    //),
                   ],
                 )
                 // _buildEmailRow(),
@@ -102,7 +151,7 @@ class _OptionState extends State<Option> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  
+                  _buildLogo(),
                   _buildContainer(),
                 ],
               ),

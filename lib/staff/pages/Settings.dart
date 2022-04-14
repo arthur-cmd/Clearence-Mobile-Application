@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ocms/bloc%20navigation/navigation_block.dart';
+//import 'package:ocms/bloc%20navigation/navigation_block.dart';
+import 'package:ocms/staff/StaffNavigation.dart';
 import 'package:ocms/main.dart';
 //import 'package:app_settings/app_settings.dart';
 
-class Settingspage extends StatelessWidget with NavigationStates {
+class StaffSettingspage extends StatelessWidget with StaffNavigationStates {
   @override
   Widget build(BuildContext context) {
     return Center(

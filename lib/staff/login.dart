@@ -1,42 +1,14 @@
 import 'package:flutter/material.dart';
-import './sidebar_layout/SideBarLayout.dart';
-import './pages/option.dart';
+import 'package:ocms/staff/staffSidebarLayout.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ocm',
-      debugShowCheckedModeBanner: false,
-      home: Option(), //SideBarLayout(),
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white, primaryColor: Colors.white),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-
-class Loginpage extends StatefulWidget {
-  const Loginpage({Key? key}) : super(key: key);
+class StaffLogin extends StatefulWidget {
+  const StaffLogin({Key? key}) : super(key: key);
 
   @override
-  State<Loginpage> createState() => _LoginpageState();
+  State<StaffLogin> createState() => _StaffLogin();
 }
 
-class _LoginpageState extends State<Loginpage> {
+class _StaffLogin extends State<StaffLogin> {
   String regno = "", password = "";
   Widget _buildLogo() {
     return Row(
@@ -104,7 +76,7 @@ class _LoginpageState extends State<Loginpage> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => SideBarLayout()),
+                MaterialPageRoute(builder: (context) => StaffSideBarLayout()),
               );
             },
             child: Text(
@@ -135,7 +107,7 @@ class _LoginpageState extends State<Loginpage> {
               Icons.confirmation_number,
               color: Colors.blue,
             ),
-            labelText: 'Registration number'),
+            labelText: 'Staff ID'),
       ),
     );
   }
@@ -166,6 +138,7 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                     ],
                   ),
+
                   _buildEmailRow(),
                   _buildPasswordRow(),
                   _buildForgetPaswordButton(),
