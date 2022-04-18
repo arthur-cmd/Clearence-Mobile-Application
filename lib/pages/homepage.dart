@@ -43,8 +43,6 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
-  
-
   Widget BuildRoom() {
     return TextFormField(
       decoration: InputDecoration(labelText: '     Room'),
@@ -103,7 +101,8 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Container(
           child: Form(
         key: _formKey,
@@ -119,8 +118,17 @@ class _HomepageState extends State<Homepage> {
               height: 100,
             ),
             RaisedButton(
-                child: Text('submit',
-                    style: TextStyle(fontSize: 16, color: Colors.blue)),
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 1.5,
+                    fontSize: 30,
+                  ),
+                ),
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0)),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     return _formKey.currentState!.save();

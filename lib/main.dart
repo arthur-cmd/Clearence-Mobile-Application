@@ -203,13 +203,16 @@ class _LoginpageState extends State<Loginpage> {
                       )),
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  _buildLogo(),
-                  _buildContainer(),
-                ],
-              ),
+              SizedBox(
+                height: 1000,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: <Widget>[
+                    _buildLogo(),
+                    _buildContainer(),
+                  ],
+                ),
+              )
             ],
           )),
     );
