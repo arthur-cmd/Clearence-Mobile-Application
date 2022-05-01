@@ -42,7 +42,10 @@ dependencies:
   flutter_image_slideshow: ^0.1.2
   settings_ui: ^2.0.2
   flutter_native_splash: ^2.1.6
-  awesome_notifications: any # Any attribute updates automatically your source to the last version
+  syncfusion_flutter_charts: ^17.3.26
+  percent_indicator: ^3.0.1
+  #google_fonts: ^2.3.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -102,6 +105,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 flutter_native_splash:
+  text: "OCMS" 
   color: "#42a5f5"
   image: assets/images/udsm.png
   #background_image: "assets/images/udsm.png"

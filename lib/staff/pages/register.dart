@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/main.dart';
+import 'package:ocms/staff/login.dart';
 
-class Registerpage extends StatefulWidget {
-  const Registerpage({Key? key}) : super(key: key);
+class StaffRegisterpage extends StatefulWidget {
+  const StaffRegisterpage({Key? key}) : super(key: key);
 
   @override
-  State<Registerpage> createState() => _RegisterpageState();
+  State<StaffRegisterpage> createState() => _StaffRegisterpageState();
 }
 
-class _RegisterpageState extends State<Registerpage> {
-  String regno = "", course = "", password = "";
+class _StaffRegisterpageState extends State<StaffRegisterpage> {
+  String staffId = "", department = "", password = "";
   Widget _buildLogo() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +77,7 @@ class _RegisterpageState extends State<Registerpage> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => Loginpage()),
+                MaterialPageRoute(builder: (context) => StaffLogin()),
               );
             },
             child: Text(
@@ -99,7 +100,7 @@ class _RegisterpageState extends State<Registerpage> {
         keyboardType: TextInputType.text,
         onChanged: (value) {
           setState(() {
-            regno = value;
+            department = value;
           });
         },
         decoration: InputDecoration(
@@ -107,7 +108,7 @@ class _RegisterpageState extends State<Registerpage> {
               Icons.confirmation_number,
               color: Colors.blue,
             ),
-            labelText: 'Degree course'),
+            labelText: 'Department'),
       ),
     );
   }
@@ -119,7 +120,7 @@ class _RegisterpageState extends State<Registerpage> {
         keyboardType: TextInputType.text,
         onChanged: (value) {
           setState(() {
-            regno = value;
+            staffId = value;
           });
         },
         decoration: InputDecoration(
@@ -127,13 +128,12 @@ class _RegisterpageState extends State<Registerpage> {
               Icons.confirmation_number,
               color: Colors.blue,
             ),
-            labelText: 'Registration number'),
+            labelText: 'Staff ID number'),
       ),
     );
   }
 
   Widget _buildContainer() {
-    SizedBox(height: 500);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       // ignore: prefer_const_literals_to_create_immutables
@@ -162,7 +162,7 @@ class _RegisterpageState extends State<Registerpage> {
                   _buildCourseRow(),
                   _buildEmailRow(),
                   _buildPasswordRow(),
-                  // _buildForgetPaswordButton(),
+                  _buildForgetPaswordButton(),
                   _buildLoginButton(),
                   //Text(
                   //"Make sure you have an existing account from aris",
@@ -182,10 +182,10 @@ class _RegisterpageState extends State<Registerpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Color(0xfff2f3f7),
           body: Stack(
             children: <Widget>[
-              /*Container(
+              Container(
                 height: MediaQuery.of(context).size.height * 0.7,
                 width: MediaQuery.of(context).size.width,
                 child: Container(
@@ -195,22 +195,18 @@ class _RegisterpageState extends State<Registerpage> {
                         bottomLeft: const Radius.circular(70),
                         bottomRight: const Radius.circular(70),
                       )),
-                ),*/
-              SizedBox(height: 1000),
-              Center(
-                child: SizedBox(
-                  height: 1000,
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: <Widget>[
-                      SizedBox(height: 20),
-                      _buildLogo(),
-                      SizedBox(height: 70),
-                      _buildContainer(),
-                    ],
-                  ),
                 ),
               ),
+              SizedBox(
+                height: 1000,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: <Widget>[
+                    _buildLogo(),
+                    _buildContainer(),
+                  ],
+                ),
+              )
             ],
           )),
     );

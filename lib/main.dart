@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './sidebar_layout/SideBarLayout.dart';
-import './pages/option.dart';
+//import './pages/option.dart';
+import 'pages/Register.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ocm',
       debugShowCheckedModeBanner: false,
-      home: Option(), //SideBarLayout(),
+      home: Registerpage(), //SideBarLayout(),
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.white, primaryColor: Colors.white),
     );
@@ -188,7 +189,7 @@ class _LoginpageState extends State<Loginpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xfff2f3f7),
+          backgroundColor: Colors.lightBlue,
           body: Stack(
             children: <Widget>[
               Container(
@@ -208,7 +209,9 @@ class _LoginpageState extends State<Loginpage> {
                 child: ListView(
                   scrollDirection: Axis.vertical,
                   children: <Widget>[
+                    SizedBox(height: 20),
                     _buildLogo(),
+                    SizedBox(height: 70),
                     _buildContainer(),
                   ],
                 ),

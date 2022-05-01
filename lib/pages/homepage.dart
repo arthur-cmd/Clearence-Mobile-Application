@@ -7,7 +7,7 @@ class Homepage extends StatefulWidget with NavigationStates {
 }
 
 class _HomepageState extends State<Homepage> {
-  String Name = "";
+   String Name = "";
   String Regno = "";
   String Room_no = "";
   String Programme = "";
@@ -42,6 +42,8 @@ class _HomepageState extends State<Homepage> {
       },
     );
   }
+
+  
 
   Widget BuildRoom() {
     return TextFormField(
@@ -101,8 +103,7 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
+    return Center(
       child: Container(
           child: Form(
         key: _formKey,
@@ -118,17 +119,8 @@ class _HomepageState extends State<Homepage> {
               height: 100,
             ),
             RaisedButton(
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 1.5,
-                    fontSize: 30,
-                  ),
-                ),
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0)),
+                child: Text('submit',
+                    style: TextStyle(fontSize: 16, color: Colors.blue)),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     return _formKey.currentState!.save();

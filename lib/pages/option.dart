@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ocms/main.dart';
 import 'package:ocms/staff/login.dart';
+import 'Register.dart';
+import 'package:ocms/staff/pages/register.dart';
 //import './sidebar_layout/SideBarLayout.dart';
 
 class Option extends StatefulWidget {
@@ -64,7 +66,8 @@ class _OptionState extends State<Option> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => StaffLogin()),
+                          MaterialPageRoute(
+                              builder: (context) => StaffRegisterpage()),
                         );
                       },
                       shape: RoundedRectangleBorder(
@@ -91,7 +94,8 @@ class _OptionState extends State<Option> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Loginpage()),
+                          MaterialPageRoute(
+                              builder: (context) => Registerpage()),
                         );
                       },
                       shape: RoundedRectangleBorder(

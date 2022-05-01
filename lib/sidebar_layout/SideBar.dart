@@ -1,6 +1,6 @@
-// ignore_for_file: import_of_legacy_library_into_null_safe
-
+// ignore: file_names
 import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'SideBarLayout.dart';
@@ -185,27 +185,56 @@ class _SideBarState extends State<SideBar>
               Align(
                 alignment: Alignment(0, -0.9),
                 child: GestureDetector(
-                  onTap: () {
-                    onIconPressed();
-                  },
-                  child: Container(
-                    width: 35,
-                    height: 110,
-                    color: Colors.blue,
-                    alignment: Alignment.centerLeft,
-                    child: AnimatedIcon(
-                      progress: _animationController.view,
-                      icon: AnimatedIcons.menu_close,
-                      color: Colors.white,
-                      size: 25,
-                    ),
-                  ),
-                ),
+                    onTap: () {
+                      onIconPressed();
+                    },
+                    child: ClipPath(
+                      clipper: CustomeMenuClipper(),
+                      child: Container(
+                        width: 35,
+                        height: 110,
+                        color: Colors.blue,
+                        alignment: Alignment.centerLeft,
+                        child: AnimatedIcon(
+                          progress: _animationController.view,
+                          icon: AnimatedIcons.menu_close,
+                          color: Colors.white,
+                          size: 25,
+                        ),
+                      ),
+                    )),
               ),
             ],
           ),
         );
       },
     );
+  }
+}
+
+class CustomeMenuClipper extends CustomClipper<Path> {
+  @override
+  @override
+  Path getClip(Size size) {
+    // TODO: implement getClip
+    Paint paint = Paint();
+    paint.color = Colors.white;
+
+    final width = size.width;
+    final height = size.height;
+
+    Path path = Path();
+    path.moveTo(0, 0);
+    path.quadraticBezierTo(0, 0, 10, 10);
+    path.quadraticBezierTo(width - 1, height / 2 - 20, width, height / 2);
+    path.quadraticBezierTo(width + 1, height / 2 + 20, 10, height - 16);
+    path.quadraticBezierTo(0, height - 8, 0, height);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
   }
 }

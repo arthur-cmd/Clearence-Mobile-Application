@@ -38,7 +38,7 @@ class NavigationBloc extends Bloc<NavigationEvents, NavigationStates> {
         break;
 
       case NavigationEvents.StatusClickedEvent:
-        yield StatusPage();
+        yield NotificationPage();
         break;
 
       case NavigationEvents.WelcomeClickedEvent:
