@@ -7,7 +7,7 @@ class Homepage extends StatefulWidget with NavigationStates {
 }
 
 class _HomepageState extends State<Homepage> {
-   String Name = "";
+  String Name = "";
   String Regno = "";
   String Room_no = "";
   String Programme = "";
@@ -17,7 +17,12 @@ class _HomepageState extends State<Homepage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Widget BuildName() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '     name'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.important_devices,
+            color: Colors.blue,
+          ),
+          labelText: '     name'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your name';
@@ -31,7 +36,12 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildReg() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '     Registration number'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.confirmation_number,
+            color: Colors.blue,
+          ),
+          labelText: '     Registration number'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your registration number';
@@ -43,11 +53,14 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
-  
-
   Widget BuildRoom() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '     Room'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.bed,
+            color: Colors.blue,
+          ),
+          labelText: '     Room'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your room number';
@@ -61,7 +74,12 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildProgramme() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '    Programme'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.book,
+            color: Colors.blue,
+          ),
+          labelText: '    Programme'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your programme';
@@ -75,7 +93,12 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildHall() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '      Hall'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.room,
+            color: Colors.blue,
+          ),
+          labelText: '      Hall'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your hall of residency';
@@ -89,7 +112,12 @@ class _HomepageState extends State<Homepage> {
 
   Widget BuildSponsor() {
     return TextFormField(
-      decoration: InputDecoration(labelText: '       Sponsor'),
+      decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.people,
+            color: Colors.blue,
+          ),
+          labelText: '       Sponsor'),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
           return 'enter your sponsor name';
@@ -110,6 +138,9 @@ class _HomepageState extends State<Homepage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              height: 100,
+            ),
             BuildName(),
             BuildReg(),
             BuildRoom(),
@@ -119,8 +150,11 @@ class _HomepageState extends State<Homepage> {
               height: 100,
             ),
             RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0)),
+                color: Colors.blue,
                 child: Text('submit',
-                    style: TextStyle(fontSize: 16, color: Colors.blue)),
+                    style: TextStyle(fontSize: 16, color: Colors.white)),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     return _formKey.currentState!.save();

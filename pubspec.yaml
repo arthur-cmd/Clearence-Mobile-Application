@@ -42,8 +42,9 @@ dependencies:
   flutter_image_slideshow: ^0.1.2
   settings_ui: ^2.0.2
   flutter_native_splash: ^2.1.6
-  syncfusion_flutter_charts: ^17.3.26
+  #syncfusion_flutter_charts: ^17.3.26
   percent_indicator: ^3.0.1
+  intl: ^0.17.0
   #google_fonts: ^2.3.0
   
 dev_dependencies:
@@ -107,7 +108,7 @@ flutter:
 flutter_native_splash:
   text: "OCMS" 
   color: "#42a5f5"
-  image: assets/images/udsm.png
+  image: assets/images/logo-udsm-.png
   #background_image: "assets/images/udsm.png"
 
   

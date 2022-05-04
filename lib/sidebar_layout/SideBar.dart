@@ -139,7 +139,7 @@ class _SideBarState extends State<SideBar>
 
                       MenuItem(
                           icon: Icons.fact_check,
-                          title: 'Clearence progress',
+                          title: 'Clearence status',
                           onTap: () {
                             onIconPressed();
                             BlocProvider.of<NavigationBloc>(context)

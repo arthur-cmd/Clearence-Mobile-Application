@@ -54,7 +54,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
         FlatButton(
           onPressed: () {},
           child: Text(
-            'Forgot password?',
+            'Already have an account?',
             style: TextStyle(color: Colors.blue),
           ),
         ),
@@ -182,10 +182,10 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xfff2f3f7),
+          backgroundColor: Colors.lightBlue,
           body: Stack(
             children: <Widget>[
-              Container(
+              /*Container(
                 height: MediaQuery.of(context).size.height * 0.7,
                 width: MediaQuery.of(context).size.width,
                 child: Container(
@@ -195,18 +195,22 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
                         bottomLeft: const Radius.circular(70),
                         bottomRight: const Radius.circular(70),
                       )),
+                ),*/
+              SizedBox(height: 1000),
+              Center(
+                child: SizedBox(
+                  height: 1000,
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                      SizedBox(height: 20),
+                      _buildLogo(),
+                      SizedBox(height: 70),
+                      _buildContainer(),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 1000,
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  children: <Widget>[
-                    _buildLogo(),
-                    _buildContainer(),
-                  ],
-                ),
-              )
             ],
           )),
     );

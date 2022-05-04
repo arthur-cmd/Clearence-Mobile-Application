@@ -37,22 +37,56 @@ class _OptionState extends State<Option> {
         ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.3,
-            width: MediaQuery.of(context).size.width * 0.8,
+            height: MediaQuery.of(context).size.height * 0.6,
+            width: MediaQuery.of(context).size.width * 0.9,
             decoration: BoxDecoration(color: Colors.white),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Row(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.center,
 
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
-                    Text(
-                      "choose type of user ",
-                      style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height / 30),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(left: 15.0, top: 10.0, bottom: 10.0),
+                      child: Text(
+                        'Welcome to OCMS',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(left: 15.0, top: 10.0, bottom: 15.0),
+                      child: Text(
+                        'Clearence portal where students and staffs can perform clearance remotely.',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(left: 15.0, top: 10.0, bottom: 15.0),
+                      child: Text(
+                        'Choose type of user to start',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -72,7 +106,7 @@ class _OptionState extends State<Option> {
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
-                      color: Colors.blue,
+                      color: Colors.lightBlue,
                       child: Text(
                         'Staff?',
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -100,7 +134,7 @@ class _OptionState extends State<Option> {
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
-                      color: Colors.blue,
+                      color: Colors.lightBlue,
                       child: Text(
                         'Student?',
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -137,10 +171,10 @@ class _OptionState extends State<Option> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xfff2f3f7),
+          backgroundColor: Colors.lightBlue,
           body: Stack(
             children: <Widget>[
-              Container(
+              /*Container(
                 height: MediaQuery.of(context).size.height * 0.7,
                 width: MediaQuery.of(context).size.width,
                 child: Container(
@@ -150,14 +184,21 @@ class _OptionState extends State<Option> {
                         bottomLeft: const Radius.circular(70),
                         bottomRight: const Radius.circular(70),
                       )),
+                ),*/
+              //SizedBox(height: 1000),
+              Center(
+                child: SizedBox(
+                  height: 1000,
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                      SizedBox(height: 30),
+                      _buildLogo(),
+                      SizedBox(height: 70),
+                      _buildContainer(),
+                    ],
+                  ),
                 ),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  _buildLogo(),
-                  _buildContainer(),
-                ],
               ),
             ],
           )),

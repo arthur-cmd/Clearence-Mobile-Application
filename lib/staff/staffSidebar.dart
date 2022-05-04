@@ -140,7 +140,7 @@ class _StaffSideBarState extends State<StaffSideBar>
 
                       MenuItem(
                           icon: Icons.fact_check,
-                          title: 'Clearence progress',
+                          title: 'Clearence status',
                           onTap: () {
                             onIconPressed();
                             BlocProvider.of<StaffNavigationBloc>(context).add(

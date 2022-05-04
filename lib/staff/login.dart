@@ -161,7 +161,7 @@ class _StaffLogin extends State<StaffLogin> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xfff2f3f7),
+          backgroundColor: Colors.lightBlue,
           body: Stack(
             children: <Widget>[
               Container(

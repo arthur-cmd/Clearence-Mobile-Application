@@ -64,23 +64,14 @@ class Welcomepage extends StatelessWidget with NavigationStates {
             SizedBox(
               height: 50,
             ),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  Container(
-                    width: 350,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(5),
-                        topLeft: Radius.circular(35),
-                      ),
-                      color: Colors.grey[400],
-                    ),
-                    child: Padding(
+            Column(children: [
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Padding(
                       padding: EdgeInsets.only(left: 15.0),
                       child: Text(
-                        '  Day to day progress will be tracked for fast and easy clearence,Go to the sidebar menu and then press Start clearence to start your clearence',
+                        ' - Day to day progress will be tracked',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -88,8 +79,59 @@ class Welcomepage extends StatelessWidget with NavigationStates {
                         ),
                       ),
                     ),
-                  )
-                ])
+                  ]),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        ' - The clearence progress has to rech 100%',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ]),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        ' So as to finish the process',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ]),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        ' BON VOYAGE',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ])
+            ])
           ],
         ));
   }
