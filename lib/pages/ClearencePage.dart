@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 import '../Clear.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class ClearencePage extends StatelessWidget with NavigationStates {
   final List<Clear> clearencelist = [
@@ -34,7 +35,10 @@ class ClearencePage extends StatelessWidget with NavigationStates {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             Padding(
                 padding: EdgeInsets.only(left: 15.0, top: 8.0, bottom: 4.0),
-                child: Text(clearme.title, style: new TextStyle(fontSize: 20))),
+                child: Text(
+                  clearme.title,
+                  style: new TextStyle(fontSize: 20, color: HexColor("013221")),
+                )),
             Spacer(),
           ]),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[

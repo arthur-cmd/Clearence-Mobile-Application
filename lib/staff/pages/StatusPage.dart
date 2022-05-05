@@ -7,7 +7,7 @@ class StaffStatusPage extends StatelessWidget with StaffNavigationStates {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue[50],
+        
         appBar: AppBar(
             leading: IconButton(
                 onPressed: () {
@@ -80,7 +80,7 @@ class StaffStatusPage extends StatelessWidget with StaffNavigationStates {
                             topRight: Radius.circular(5),
                             topLeft: Radius.circular(35),
                           ),
-                          color: Colors.blue[40]),
+                          ),
                       child: ListView(
                         physics: BouncingScrollPhysics(),
                         children: const [
@@ -91,11 +91,11 @@ class StaffStatusPage extends StatelessWidget with StaffNavigationStates {
                             //leading: ClipOval(),
                             title: Text.rich(TextSpan(children: <TextSpan>[
                               TextSpan(
-                                  text: 'Bursar',
+                                  text: 'Estate manager',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                               TextSpan(
-                                text: ' Cleared your tuition fee',
+                                text: ' Cleared your tu',
                               )
                             ])),
                             subtitle: Text('9 mins ago'),
@@ -105,7 +105,7 @@ class StaffStatusPage extends StatelessWidget with StaffNavigationStates {
                             //leading: ClipOval(),
                             title: Text.rich(TextSpan(children: <TextSpan>[
                               TextSpan(
-                                  text: 'Warden',
+                                  text: 'Bursar',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                               TextSpan(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 import 'package:ocms/main.dart';
 import 'package:settings_ui/settings_ui.dart';
+import 'package:hexcolor/hexcolor.dart';
 //import 'package:app_settings/app_settings.dart';
 
 class Settingspage extends StatelessWidget with NavigationStates {
@@ -14,6 +15,7 @@ class Settingspage extends StatelessWidget with NavigationStates {
     return Scaffold(
       appBar: AppBar(
         title: Text("settings"),
+        backgroundColor: HexColor("013221"),
       ),
 
       // ignore: prefer_const_literals_to_create_immutables

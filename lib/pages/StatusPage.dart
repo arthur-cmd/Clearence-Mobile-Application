@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 //import 'package:sitting_design/pages/campaign_page.dart';
 import 'ClearencePage.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class NotificationPage extends StatefulWidget with NavigationStates {
   @override
@@ -79,11 +80,11 @@ class _NotificationPageState extends State<NotificationPage> {
                   child: Container(
                       width: 400,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(5),
-                            topLeft: Radius.circular(35),
-                          ),
-                          color: Colors.blue[40]),
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(5),
+                          topLeft: Radius.circular(35),
+                        ),
+                      ),
                       child: ListView(
                         physics: BouncingScrollPhysics(),
                         children: const [

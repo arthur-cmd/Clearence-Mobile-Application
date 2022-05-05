@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 //import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:hexcolor/hexcolor.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class Welcomepage extends StatelessWidget with NavigationStates {
@@ -55,7 +56,7 @@ class Welcomepage extends StatelessWidget with NavigationStates {
                   percent: 0.1,
                   circularStrokeCap: CircularStrokeCap.round,
                   lineWidth: 40.0,
-                  progressColor: Colors.blue,
+                  progressColor: HexColor("013221"),
                   center: Text(' 10%'),
                   animation: true,
                 ))
@@ -124,7 +125,7 @@ class Welcomepage extends StatelessWidget with NavigationStates {
                       child: Text(
                         ' BON VOYAGE',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: HexColor("013221"),
                           fontWeight: FontWeight.bold,
                           fontSize: 30,
                         ),

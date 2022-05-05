@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 //import 'package:ocms/bloc%20navigation/navigation_block.dart';
 import 'package:ocms/staff/StaffNavigation.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class StaffWelcomepage extends StatelessWidget with StaffNavigationStates {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blue[50],
+      
         body: Column(
           children: [
             SizedBox(
@@ -54,7 +55,7 @@ class StaffWelcomepage extends StatelessWidget with StaffNavigationStates {
                   percent: 0.1,
                   circularStrokeCap: CircularStrokeCap.round,
                   lineWidth: 40.0,
-                  progressColor: Colors.blue,
+                  progressColor:  HexColor("013221"),
                   center: Text(' 10%'),
                   animation: true,
                 ))

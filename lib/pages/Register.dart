@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/main.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Registerpage extends StatefulWidget {
   const Registerpage({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class _RegisterpageState extends State<Registerpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.lock,
-              color: Colors.blue,
+              color:  HexColor("013221"),
             ),
             labelText: 'password'),
       ),
@@ -54,7 +55,7 @@ class _RegisterpageState extends State<Registerpage> {
           onPressed: () {},
           child: Text(
             'Forgot password?',
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(color:  HexColor("013221")),
           ),
         ),
       ],
@@ -72,7 +73,7 @@ class _RegisterpageState extends State<Registerpage> {
           child: RaisedButton(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            color: Colors.blue,
+            color:  HexColor("013221"),
             onPressed: () {
               Navigator.pushReplacement(
                 context,
@@ -105,7 +106,7 @@ class _RegisterpageState extends State<Registerpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color:  HexColor("013221"),
             ),
             labelText: 'Degree course'),
       ),
@@ -125,7 +126,7 @@ class _RegisterpageState extends State<Registerpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color:  HexColor("013221"),
             ),
             labelText: 'Registration number'),
       ),
@@ -182,7 +183,7 @@ class _RegisterpageState extends State<Registerpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor:  HexColor("013221"),
           body: Stack(
             children: <Widget>[
               /*Container(

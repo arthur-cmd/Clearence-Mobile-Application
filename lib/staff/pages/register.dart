@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/main.dart';
 import 'package:ocms/staff/login.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class StaffRegisterpage extends StatefulWidget {
   const StaffRegisterpage({Key? key}) : super(key: key);
@@ -39,7 +40,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.lock,
-              color: Colors.blue,
+              color: HexColor("013221"),
             ),
             labelText: 'password'),
       ),
@@ -55,7 +56,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
           onPressed: () {},
           child: Text(
             'Already have an account?',
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(color: HexColor("013221")),
           ),
         ),
       ],
@@ -73,7 +74,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
           child: RaisedButton(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            color: Colors.blue,
+            color: HexColor("013221"),
             onPressed: () {
               Navigator.pushReplacement(
                 context,
@@ -106,7 +107,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color:  HexColor("013221"),
             ),
             labelText: 'Department'),
       ),
@@ -126,7 +127,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color:  HexColor("013221"),
             ),
             labelText: 'Staff ID number'),
       ),
@@ -182,7 +183,7 @@ class _StaffRegisterpageState extends State<StaffRegisterpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor:  HexColor("013221"),
           body: Stack(
             children: <Widget>[
               /*Container(

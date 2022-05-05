@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ocms/staff/StaffNavigation.dart';
 import 'package:ocms/main.dart';
 import 'package:settings_ui/settings_ui.dart';
+import 'package:hexcolor/hexcolor.dart';
 //import 'package:app_settings/app_settings.dart';
 
 class StaffSettingspage extends StatelessWidget with StaffNavigationStates {
@@ -11,9 +12,8 @@ class StaffSettingspage extends StatelessWidget with StaffNavigationStates {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("settings"),
-      ),
+      appBar:
+          AppBar(title: Text("settings"), backgroundColor: HexColor("013221")),
 
       // ignore: prefer_const_literals_to_create_immutables
       body: SettingsList(

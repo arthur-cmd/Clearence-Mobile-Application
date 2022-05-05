@@ -15,6 +15,7 @@ import '../bloc navigation/navigation_block.dart';
 
 //import 'package:solaris/constants.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class SideBar extends StatefulWidget {
   @override
@@ -82,7 +83,7 @@ class _SideBarState extends State<SideBar>
             children: <Widget>[
               Expanded(
                 child: Container(
-                  color: Colors.blue,
+                  color: HexColor("013221"),
                   child: Column(
                     children: <Widget>[
                       SizedBox(
@@ -193,7 +194,7 @@ class _SideBarState extends State<SideBar>
                       child: Container(
                         width: 35,
                         height: 110,
-                        color: Colors.blue,
+                        color: HexColor("013221"),
                         alignment: Alignment.centerLeft,
                         child: AnimatedIcon(
                           progress: _animationController.view,

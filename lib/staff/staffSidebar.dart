@@ -16,6 +16,7 @@ import '../bloc navigation/navigation_block.dart';
 
 //import 'package:solaris/constants.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class StaffSideBar extends StatefulWidget {
   @override
@@ -83,7 +84,7 @@ class _StaffSideBarState extends State<StaffSideBar>
             children: <Widget>[
               Expanded(
                 child: Container(
-                  color: Colors.blue,
+                  color: HexColor("013221"),
                   child: Column(
                     children: <Widget>[
                       SizedBox(
@@ -91,7 +92,7 @@ class _StaffSideBarState extends State<StaffSideBar>
                       ),
                       ListTile(
                         title: Text(
-                          'Dr.Kalinga',
+                          'Dr.Kandoro',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
@@ -194,7 +195,7 @@ class _StaffSideBarState extends State<StaffSideBar>
                     child: Container(
                       width: 35,
                       height: 110,
-                      color: Colors.blue,
+                      color: HexColor("013221"),
                       alignment: Alignment.centerLeft,
                       child: AnimatedIcon(
                         progress: _animationController.view,

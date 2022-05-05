@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './sidebar_layout/SideBarLayout.dart';
 import './pages/option.dart';
 import 'pages/Register.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() => runApp(MyApp());
 
@@ -67,7 +68,7 @@ class _LoginpageState extends State<Loginpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.lock,
-              color: Colors.blue,
+              color: HexColor("013221"),
             ),
             labelText: 'password'),
       ),
@@ -80,10 +81,15 @@ class _LoginpageState extends State<Loginpage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         FlatButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Loginpage()),
+            );
+          },
           child: Text(
-            'Forgot password?',
-            style: TextStyle(color: Colors.blue),
+            'Already have an account?',
+            style: TextStyle(color: HexColor("013221")),
           ),
         ),
       ],
@@ -101,9 +107,9 @@ class _LoginpageState extends State<Loginpage> {
           child: RaisedButton(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            color: Colors.blue,
+            color: HexColor("013221"),
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SideBarLayout()),
               );
@@ -134,7 +140,7 @@ class _LoginpageState extends State<Loginpage> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color: HexColor("013221"),
             ),
             labelText: 'Registration number'),
       ),
@@ -189,7 +195,7 @@ class _LoginpageState extends State<Loginpage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: HexColor("013221"),
           body: Stack(
             children: <Widget>[
               Container(
@@ -197,7 +203,7 @@ class _LoginpageState extends State<Loginpage> {
                 width: MediaQuery.of(context).size.width,
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: HexColor("013221"),
                       borderRadius: BorderRadius.only(
                         bottomLeft: const Radius.circular(70),
                         bottomRight: const Radius.circular(70),

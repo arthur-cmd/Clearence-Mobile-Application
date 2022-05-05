@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/staff/staffSidebarLayout.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class StaffLogin extends StatefulWidget {
   const StaffLogin({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class _StaffLogin extends State<StaffLogin> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.lock,
-              color: Colors.blue,
+              color: HexColor("013221"),
             ),
             labelText: 'password'),
       ),
@@ -54,7 +55,7 @@ class _StaffLogin extends State<StaffLogin> {
           onPressed: () {},
           child: Text(
             'Forgot password?',
-            style: TextStyle(color: Colors.blue),
+            style: TextStyle(color: HexColor("013221")),
           ),
         ),
       ],
@@ -72,7 +73,7 @@ class _StaffLogin extends State<StaffLogin> {
           child: RaisedButton(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0)),
-            color: Colors.blue,
+            color: HexColor("013221"),
             onPressed: () {
               Navigator.pushReplacement(
                 context,
@@ -105,7 +106,7 @@ class _StaffLogin extends State<StaffLogin> {
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.confirmation_number,
-              color: Colors.blue,
+              color: HexColor("013221"),
             ),
             labelText: 'Staff ID'),
       ),
@@ -161,7 +162,7 @@ class _StaffLogin extends State<StaffLogin> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: HexColor("013221"),
           body: Stack(
             children: <Widget>[
               Container(
@@ -169,20 +170,25 @@ class _StaffLogin extends State<StaffLogin> {
                 width: MediaQuery.of(context).size.width,
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: HexColor("013221"),
                       borderRadius: BorderRadius.only(
                         bottomLeft: const Radius.circular(70),
                         bottomRight: const Radius.circular(70),
                       )),
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  _buildLogo(),
-                  _buildContainer(),
-                ],
-              ),
+              SizedBox(
+                height: 1000,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: <Widget>[
+                    SizedBox(height: 20),
+                    _buildLogo(),
+                    SizedBox(height: 70),
+                    _buildContainer(),
+                  ],
+                ),
+              )
             ],
           )),
     );

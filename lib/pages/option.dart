@@ -4,6 +4,7 @@ import 'package:ocms/main.dart';
 import 'package:ocms/staff/login.dart';
 import 'Register.dart';
 import 'package:ocms/staff/pages/register.dart';
+import 'package:hexcolor/hexcolor.dart';
 //import './sidebar_layout/SideBarLayout.dart';
 
 class Option extends StatefulWidget {
@@ -15,18 +16,24 @@ class Option extends StatefulWidget {
 
 class _OptionState extends State<Option> {
   Widget _buildLogo() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          'OCMS',
-          style: TextStyle(
-              fontSize: MediaQuery.of(context).size.height / 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white),
-        ),
-      ],
-    );
+    return Column(children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'OCMS',
+            style: TextStyle(
+                fontSize: MediaQuery.of(context).size.height / 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
+          ),
+        ],
+      ),
+      Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+        
+        Image.asset('assets/images/logo-udsm-.png'),
+      ]),
+    ]);
   }
 
   Widget _buildContainer() {
@@ -106,7 +113,7 @@ class _OptionState extends State<Option> {
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
-                      color: Colors.lightBlue,
+                      color: HexColor("013221"),
                       child: Text(
                         'Staff?',
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -134,7 +141,7 @@ class _OptionState extends State<Option> {
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
-                      color: Colors.lightBlue,
+                      color: HexColor("013221"),
                       child: Text(
                         'Student?',
                         style: TextStyle(color: Colors.white, fontSize: 30),
@@ -171,7 +178,7 @@ class _OptionState extends State<Option> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: HexColor("013221"),
           body: Stack(
             children: <Widget>[
               /*Container(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Homepage extends StatefulWidget with NavigationStates {
   @override
@@ -20,7 +21,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.important_devices,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '     name'),
       validator: (String? value) {
@@ -39,7 +40,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.confirmation_number,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '     Registration number'),
       validator: (String? value) {
@@ -58,7 +59,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.bed,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '     Room'),
       validator: (String? value) {
@@ -77,7 +78,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.book,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '    Programme'),
       validator: (String? value) {
@@ -96,7 +97,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.room,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '      Hall'),
       validator: (String? value) {
@@ -115,7 +116,7 @@ class _HomepageState extends State<Homepage> {
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.people,
-            color: Colors.blue,
+            color: HexColor("013221"),
           ),
           labelText: '       Sponsor'),
       validator: (String? value) {
@@ -152,7 +153,7 @@ class _HomepageState extends State<Homepage> {
             RaisedButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0)),
-                color: Colors.blue,
+                color: HexColor("013221"),
                 child: Text('submit',
                     style: TextStyle(fontSize: 16, color: Colors.white)),
                 onPressed: () {
