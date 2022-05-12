@@ -3,7 +3,7 @@ import './sidebar_layout/SideBarLayout.dart';
 import './pages/option.dart';
 import 'pages/Register.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

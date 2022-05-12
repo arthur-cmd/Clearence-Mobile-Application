@@ -1,3 +1,7 @@
+// ignore_for_file: unnecessary_new
+
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ocms/bloc%20navigation/navigation_block.dart';
 //import 'package:syncfusion_flutter_charts/charts.dart';
@@ -5,7 +9,34 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:hexcolor/hexcolor.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
-class Welcomepage extends StatelessWidget with NavigationStates {
+class Welcomepage extends StatefulWidget with NavigationStates {
+  @override
+  State<Welcomepage> createState() => _WelcomepageState();
+}
+
+class _WelcomepageState extends State<Welcomepage> {
+  double percent = 0.0;
+
+  late double _height;
+  late double _width;
+  late Timer timer;
+
+  @override
+  void initState() {
+    timer = Timer.periodic(Duration(milliseconds: 1000), (_) {
+      setState(() {
+        percent += 10;
+        if (percent >= 100) {
+          timer.cancel();
+          // percent=0;
+        }
+      });
+    });
+    ;
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,13 +84,21 @@ class Welcomepage extends StatelessWidget with NavigationStates {
                 Center(
                     child: CircularPercentIndicator(
                   radius: 200.0,
-                  percent: 0.1,
+                  percent: percent/100,
                   circularStrokeCap: CircularStrokeCap.round,
                   lineWidth: 40.0,
                   progressColor: HexColor("013221"),
-                  center: Text(' 10%'),
+                  center: new Text(
+                    percent.toString() + "%",
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
                   animation: true,
-                ))
+                  animationDuration: 1200,
+                )
+                )
               ],
             ),
             SizedBox(

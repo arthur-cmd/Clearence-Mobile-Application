@@ -43,10 +43,13 @@ dependencies:
   settings_ui: ^2.0.2
   flutter_native_splash: ^2.1.6
   #syncfusion_flutter_charts: ^17.3.26
-  percent_indicator: ^3.0.1
+  percent_indicator: ^4.0.1
   intl: ^0.17.0
   hexcolor: ^2.0.7
+  provider: ^6.0.2
   #google_fonts: ^2.3.0
+  shared_preferences: ^2.0.13
+  http: ^0.13.4
   
 dev_dependencies:
   flutter_test:
