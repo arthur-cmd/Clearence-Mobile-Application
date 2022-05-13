@@ -4,6 +4,7 @@ import './pages/option.dart';
 import 'pages/Register.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -39,6 +40,8 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
+  bool _isLoading = false;
+  final _formKey = GlobalKey<FormState>();
   String regno = "", password = "";
   Widget _buildLogo() {
     return Row(

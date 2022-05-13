@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:sky_engine/_http/http.dart';
 //import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart';
 
 class Network{
   final String _url = 'http://localhost:8000/api/v1';
@@ -27,9 +28,9 @@ class Network{
   getData(apiUrl) async {
     var fullUrl = _url + apiUrl;
     await _getToken();
-   // return await http.get(
+  // return await http.get(
      //   fullUrl,
-      //  headers: _setHeaders()
+       // headers: _setHeaders()
     //);
   }
 
